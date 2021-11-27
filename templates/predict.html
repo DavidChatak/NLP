@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/predict" method="post">
+    <label for="sentiment">Enter the text here </label>
+    <input type="textarea" name="sentiment" rows="4" cols="50">
+    <input type="submit" value="Submit the sentiment for analysis">
+</form>
+<p>
+    {% if result %}
+    <p>{{ result }}</p>
+    {% endif %}
+</p>
+{% endblock %}
